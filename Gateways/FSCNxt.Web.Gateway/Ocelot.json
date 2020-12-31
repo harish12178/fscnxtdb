@@ -1,0 +1,53 @@
+{
+    "Routes": [
+    {
+        "DownstreamPathTemplate": "/transAPI/Header/{everything}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5500
+                }
+            ],
+        "UpstreamPathTemplate": "/web/headers/{everything}"   
+    },
+    
+    {
+        "DownstreamPathTemplate": "/transAPI/Item/{everything}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5500
+                }
+            ],
+        "UpstreamPathTemplate": "/web/items/{everything}"
+    },
+    
+    {
+        "DownstreamPathTemplate": "/transAPI/Location/{everything}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5500
+                }
+            ],
+        "UpstreamPathTemplate": "/web/locations/{everything}"  
+    },
+    
+    {
+        "DownstreamPathTemplate": "/transAPI/DeviceLog/{everything}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5500
+                }
+            ],
+        "UpstreamPathTemplate": "/web/devicelog/{everything}"  
+    }],
+    "GlobalConfiguration": {
+        "BaseUrl": "http://localhost:5000"
+    }
+}
